@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Share Tech Mono', monospace;
+    background: black;
+    color: #00ffe1;
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    font-size: 28px;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 4px;
+    text-shadow: 0 0 10px #00ffe1;
+    font-size: 38px;
+}
+
+button {
+    background: transparent;
+    border: 1px solid #00ffe1;
+    color: #00ffe1;
+    padding: 12px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+button:hover {
+    background: #00ffe1;
+    color: black;
+    
+}
+
+.question {
+    font-size: 22px;
+    margin-bottom: 28px;
+    margin-top: 28px;
+  
+}
+
+.answers button {
+    display: block;
+    width: 100%;
+}
+
+.result {
+    font-size: 22px;
+    margin-top: 30px;
+    animation: glitch 1s infinite;
+}
+
+.lang-switch {
+    margin-top: 20px;
+}
+
+@keyframes glitch {
+    0% { text-shadow: 2px 0 magenta; }
+    50% { text-shadow: -2px 0 cyan; }
+    100% { text-shadow: 2px 0 magenta; }
+}
+
+#footer {
+    position: fixed;       /* zawsze przyklejona do dołu */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    color: #00ffe1;
+    border-top: 1px solid #00ffe1;
+    z-index: 3;            /* nad deszczem i innymi elementami */
+    background: rgba(0,0,0,0.5); /* lekka przeźroczystość */
+    font-size: 18px;
+}
+
+
+/* DESZCZ */
+.rain {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(
+        rgba(255,255,255,0.15) 1px,
+        transparent 1px
+    );
+    background-size: 2px 15px;
+    animation: rain 0.3s linear infinite;
+    z-index: 1;
+}
+
+@keyframes rain {
+    from { background-position: 0 0; }
+    to { background-position: 0 15px; }
+}
