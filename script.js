@@ -267,7 +267,7 @@ function showQuestion() {
         <div class="answers">
             ${pack.map((a, i) =>
                 `<button onclick="answerCustom(${a.score})">
-                    ${String.fromCharCode(65 + i)} — ${a.text}
+                     ${a.text}
                 </button>`
             ).join("")}
         </div>
@@ -289,3 +289,4 @@ function showResult() {
 
     app.innerHTML = `<div class="result">${resultText}</div>`;
 }
+
